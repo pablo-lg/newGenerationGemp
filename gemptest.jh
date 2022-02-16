@@ -1,0 +1,8 @@
+
+entity Region {
+	regionName String
+}
+
+entity Country {
+	countryName String
+}
