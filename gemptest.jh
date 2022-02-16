@@ -1,0 +1,186 @@
+
+entity Despliegue {
+  Id  Long required,
+  descripcion  String
+}
+
+entity Segmento {
+  Id  Long required,
+  descripcion String
+}
+
+entity Competencia {
+  Id  Long required,
+  descripcion String
+}
+
+entity Tecnologia {
+  Id  Long required,
+  descripcion String
+}
+
+
+entity NSE {
+  Id  Long required,
+  descripcion String,
+  activo Boolean,
+}
+
+entity TipoObra {
+  Id  Long required,
+  descripcion String
+}
+
+
+entity TipoEmp {
+  Id  Long required,
+  demanda Boolean,
+  descripcion  String
+}
+
+
+entity Emprendimiento {
+  Id Long required,
+  nombre String,
+  contacto String,
+  fechaFinObra LocalDate,
+  codigoObra String,
+  elemRed String,
+  cliCatv String,
+  cliFiber String,
+  cliFiberLt String,
+  cliFlow String,
+  cliCombo String,
+  lineasVoz String,
+  mesesDeFi String,
+  altasBC String,
+  penVivLot String,
+  penBC String,
+  demanda1 String,
+  demanda2 String,
+  demanda3 String,
+  demanda4 String,
+  demanda5 String,
+  lotes String,
+  viviendas String,
+  comProf String,
+  habitaciones String,
+  manzanas String,
+  demanda String,
+  fechaRelev LocalDate,
+  telefono String,
+  anoPriorizacion LocalDate,
+  contratoOpen String,
+  negociacion Boolean,
+  fecha LocalDate,
+  codigoDeFirma String,
+  fechaFirma LocalDate,
+  observaciones String,
+  comentario String,
+  comenCan String,
+  estadoFirma EstadoFirma,
+  estado Estado,
+  estadoBC EstadoBC,
+}
+
+entity Demanda {
+	Id Long required,
+    a1 String,
+    a2 String,
+    a3 String,
+    a4 String,
+    a5 String,
+}
+
+enum Estado {
+  SIN_ESTADO ("Sin estado"),
+  PROSPECTO ("Prospecto"),
+  RELEVADO ("Relevado"),
+  REQUERIDO ("Requerido"),
+  EN_OBRA ("En obra"),
+  TERMINADO ("Terminado"),
+  SUSPENDIDO ("Suspendido"),
+  COMPETENCIA ("Competencia"),
+  CANCELADO ("Cancelado"),
+  REEMPLAZADO ("Reemplazado"),
+  EVALUACION_ECONOMICA ("Evaluacion economica"),
+  PROCESO_FIRMA ("Proceso de firma")
+  
+}
+enum EstadoBC {
+  APROBADO ("Aprobado"),
+  NO_APROBADO ("No aprobado")
+}
+enum EstadoFirma {
+  FIRMADO ("Firmado"),
+  NO_APROBADO ("No aprobado"),
+  APROBADO_POR_CIC ("Aprobado por el CIC")
+}
+
+entity HistoWF {
+	Id Long required,
+    estadoAnterior Estado,
+    estadoActual Estado,
+}
+
+entity Parametros {
+	Id Long required,
+    clave String,
+    valor String,
+}
+
+
+
+entity GrupoEmp {
+ Id Long required,
+ descripcion String,
+ esProtegido Boolean,
+}
+
+
+entity FiltroRep {
+  Id  Long required,
+  nombre String,
+  filtro TextBlob
+}
+
+entity UsuGemp {
+	Id Long required,
+    usu String,
+    nombre String,
+    apellido String,
+    email String,
+    perfiles String,
+    
+}
+
+relationship ManyToOne {
+	TipoObra{Segmento(descripcion)} to Segmento,
+	EjecCuentas{Segmento(descripcion)} to Segmento,
+    Emprendimiento{GrupoEmp(descripcion)} to GrupoEmp
+    Emprendimiento{TipoObra(descripcion)} to TipoObra,
+    Emprendimiento{TipoEmp(descripcion)} to TipoEmp,
+    Emprendimiento{Despliegue(descripcion)} to Despliegue,
+    Emprendimiento{NSE(descripcion)} to NSE,
+    Emprendimiento{Segmento(descripcion)} to Segmento,
+    Emprendimiento{Tecnologia(descripcion)} to Tecnologia,
+
+    HistoWF{Emprendimiento(nombre)} to Emprendimiento,
+    Demanda{TipoEmp(descripcion)} to TipoEmp,
+    Demanda{Despliegue(descripcion)} to Despliegue
+}
+
+
+// Set pagination options
+paginate Emprendimiento with pagination
+
+paginate HistoWF with pagination
+
+
+filter Emprendimiento
+filter HistoWF
+
+ 
+
+
+// angularSuffix * with mySuffi
