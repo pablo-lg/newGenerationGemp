@@ -1,0 +1,136 @@
+
+entity Despliegue {
+  Id  Long required,
+  descripcion  String
+}
+
+entity Segmento {
+  Id  Long required,
+  descripcion String
+}
+
+entity Competencia {
+  Id  Long required,
+  descripcion String
+}
+
+entity Tecnologia {
+  Id  Long required,
+  descripcion String
+}
+
+
+entity NSE {
+  Id  Long required,
+  descripcion String,
+  activo Boolean,
+}
+
+entity TipoObra {
+  Id  Long required,
+  descripcion String
+}
+
+
+entity TipoEmp {
+  Id  Long required,
+  demanda Boolean,
+  descripcion  String
+}
+
+entity EjecCuentas {
+  Id  Long required,
+  telefono String,
+  apellido String,
+  celular String,
+  mail String,
+  nombre String,
+  codVendedor String,
+  legajo String,
+}
+
+entity Direccion {
+  Id Long required,
+  identification String unique,
+  pais String required,
+  provincia String required,
+  partido String required,
+  localidad String required,
+  calle String required,
+  altura Long required,
+  region String,
+  subregion String,
+  hub String,
+  barriosEspeciales String,
+  codigoPostal String,
+  tipoCalle String,
+  zonaCompetencia String,
+  intersectionLeft String,
+  intersectionRight String,
+  streetType String,
+  latitud String,
+  longitud String,
+  elementosDeRed String,   
+}
+
+entity Emprendimiento {
+  Id Long required,
+  nombre String,
+  contacto String,
+  fechaFinObra LocalDate,
+  codigoObra String,
+  elementosDeRed String,
+  clientesCatv String,
+  clientesFibertel String,
+  clientesFibertelLite String,
+  clientesFlow String,
+  clientesCombo String,
+  lineasVoz String,
+  mesesDeFinalizado String,
+  altasBC String,
+  penetracionVivLot String,
+  penetracionBC String,
+  demanda1 String,
+  demanda2 String,
+  demanda3 String,
+  demanda4 String,
+  demanda5 String,
+  lotes String,
+  viviendas String,
+  comProf String,
+  habitaciones String,
+  manzanas String,
+  demanda String,
+  fechaDeRelevamiento LocalDate,
+  telefono String,
+  anoPriorizacion LocalDate,
+  contratoOpen String,
+  negociacion Boolean,
+  fecha LocalDate,
+  codigoDeFirma String,
+  fechaFirma LocalDate,
+  observaciones String,
+  comentario String,
+  comenCan String,
+  estadoFirma EstadoFirma,
+  estado Estado,
+  estadoBC EstadoBC,
+}
+
+
+
+// Set pagination options
+paginate Emprendimiento with pagination
+paginate Direccion with pagination
+
+paginate HistoWF with pagination
+
+
+filter Emprendimiento
+filter HistoWF
+filter Direccion
+
+ 
+
+
+// angularSuffix * with mySuffi
