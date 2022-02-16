@@ -1,0 +1,52 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154122",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ejec_cuentas",
+  "fields": [
+    {
+      "fieldName": "telefono",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "apellido",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "celular",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codVendedor",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "legajo",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "EjecCuentas",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "descripcion",
+      "otherEntityName": "segmento",
+      "otherEntityRelationshipName": "ejecCuentas",
+      "relationshipName": "segmento",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154121",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "tipo_emp",
+  "fields": [
+    {
+      "fieldName": "demanda",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TipoEmp",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

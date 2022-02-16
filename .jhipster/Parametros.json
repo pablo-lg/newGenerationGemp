@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154127",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "parametros",
+  "fields": [
+    {
+      "fieldName": "clave",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "valor",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Parametros",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

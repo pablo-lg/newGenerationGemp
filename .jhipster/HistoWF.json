@@ -1,0 +1,34 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154126",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "histo_wf",
+  "fields": [
+    {
+      "fieldName": "estadoAnterior",
+      "fieldType": "Estado",
+      "fieldValues": "SIN_ESTADO (Sin estado),PROSPECTO (Prospecto),RELEVADO (Relevado),REQUERIDO (Requerido),EN_OBRA (En obra),TERMINADO (Terminado),SUSPENDIDO (Suspendido),COMPETENCIA (Competencia),CANCELADO (Cancelado),REEMPLAZADO (Reemplazado),EVALUACION_ECONOMICA (Evaluacion economica),PROCESO_FIRMA (Proceso de firma)"
+    },
+    {
+      "fieldName": "estadoActual",
+      "fieldType": "Estado",
+      "fieldValues": "SIN_ESTADO (Sin estado),PROSPECTO (Prospecto),RELEVADO (Relevado),REQUERIDO (Requerido),EN_OBRA (En obra),TERMINADO (Terminado),SUSPENDIDO (Suspendido),COMPETENCIA (Competencia),CANCELADO (Cancelado),REEMPLAZADO (Reemplazado),EVALUACION_ECONOMICA (Evaluacion economica),PROCESO_FIRMA (Proceso de firma)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "HistoWF",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "emprendimiento",
+      "otherEntityRelationshipName": "histoWF",
+      "relationshipName": "emprendimiento",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}

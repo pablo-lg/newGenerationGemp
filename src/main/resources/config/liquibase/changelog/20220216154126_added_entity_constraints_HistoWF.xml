@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity HistoWF.
+    -->
+    <changeSet id="20220216154126-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="emprendimiento_id"
+                                 baseTableName="histo_wf"
+                                 constraintName="fk_histo_wf__emprendimie_69_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="emprendimiento"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,25 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154129",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "filtro_rep",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "filtro",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "text"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "FiltroRep",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

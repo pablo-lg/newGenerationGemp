@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154118",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "tecnologia",
+  "fields": [
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Tecnologia",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
