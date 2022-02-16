@@ -1,0 +1,19 @@
+
+entity Despliegue {
+  Id  Long required,
+  descripcion  String
+}
+
+entity Segmento {
+  Id  Long required,
+  descripcion String
+}
+
+
+
+relationship ManyToMany {
+	Segmento{Despliegue(descripcion)} to Despliegue{Segmento}
+}
+
+
+
