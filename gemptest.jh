@@ -1,0 +1,40 @@
+
+entity Despliegue {
+  Id  Long required,
+  descripcion  String
+}
+
+entity Segmento {
+  Id  Long required,
+  descripcion String
+}
+
+entity Competencia {
+  Id  Long required,
+  descripcion String
+}
+
+entity Tecnologia {
+  Id  Long required,
+  descripcion String
+}
+
+
+entity NSE {
+  Id  Long required,
+  descripcion String,
+  activo Boolean,
+}
+
+entity TipoObra {
+  Id  Long required,
+  descripcion String
+}
+
+
+entity TipoEmp {
+  Id  Long required,
+  demanda Boolean,
+  descripcion  String
+}
+
