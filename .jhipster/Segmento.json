@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216153935",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "segmento",
+  "fields": [
+    {
+      "fieldName": "countryName",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Segmento",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
