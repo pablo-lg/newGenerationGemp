@@ -1,0 +1,7 @@
+
+entity Despliegue {
+	Id Long required,
+    descripcion String
+}
+
+
