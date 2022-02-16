@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154120",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "tipo_obra",
+  "fields": [
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "TipoObra",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "descripcion",
+      "otherEntityName": "segmento",
+      "otherEntityRelationshipName": "tipoObra",
+      "relationshipName": "segmento",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

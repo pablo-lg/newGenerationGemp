@@ -1,0 +1,72 @@
+import dayjs from 'dayjs';
+import { IGrupoEmp } from 'app/shared/model/grupo-emp.model';
+import { ITipoObra } from 'app/shared/model/tipo-obra.model';
+import { ITipoEmp } from 'app/shared/model/tipo-emp.model';
+import { IDespliegue } from 'app/shared/model/despliegue.model';
+import { INSE } from 'app/shared/model/nse.model';
+import { ISegmento } from 'app/shared/model/segmento.model';
+import { ITecnologia } from 'app/shared/model/tecnologia.model';
+import { IEjecCuentas } from 'app/shared/model/ejec-cuentas.model';
+import { IDireccion } from 'app/shared/model/direccion.model';
+import { ICompetencia } from 'app/shared/model/competencia.model';
+import { EstadoFirma } from 'app/shared/model/enumerations/estado-firma.model';
+import { Estado } from 'app/shared/model/enumerations/estado.model';
+import { EstadoBC } from 'app/shared/model/enumerations/estado-bc.model';
+
+export interface IEmprendimiento {
+  id?: number;
+  nombre?: string | null;
+  contacto?: string | null;
+  fechaFinObra?: string | null;
+  codigoObra?: string | null;
+  elementosDeRed?: string | null;
+  clientesCatv?: string | null;
+  clientesFibertel?: string | null;
+  clientesFibertelLite?: string | null;
+  clientesFlow?: string | null;
+  clientesCombo?: string | null;
+  lineasVoz?: string | null;
+  mesesDeFinalizado?: string | null;
+  altasBC?: string | null;
+  penetracionVivLot?: string | null;
+  penetracionBC?: string | null;
+  demanda1?: string | null;
+  demanda2?: string | null;
+  demanda3?: string | null;
+  demanda4?: string | null;
+  demanda5?: string | null;
+  lotes?: string | null;
+  viviendas?: string | null;
+  comProf?: string | null;
+  habitaciones?: string | null;
+  manzanas?: string | null;
+  demanda?: string | null;
+  fechaDeRelevamiento?: string | null;
+  telefono?: string | null;
+  anoPriorizacion?: string | null;
+  contratoOpen?: string | null;
+  negociacion?: boolean | null;
+  fecha?: string | null;
+  codigoDeFirma?: string | null;
+  fechaFirma?: string | null;
+  observaciones?: string | null;
+  comentario?: string | null;
+  comenCan?: string | null;
+  estadoFirma?: EstadoFirma | null;
+  estado?: Estado | null;
+  estadoBC?: EstadoBC | null;
+  grupoEmp?: IGrupoEmp | null;
+  tipoObra?: ITipoObra | null;
+  tipoEmp?: ITipoEmp | null;
+  despliegue?: IDespliegue | null;
+  nSE?: INSE | null;
+  segmento?: ISegmento | null;
+  tecnologia?: ITecnologia | null;
+  ejecCuentas?: IEjecCuentas | null;
+  direccion?: IDireccion | null;
+  direccion?: ICompetencia | null;
+}
+
+export const defaultValue: Readonly<IEmprendimiento> = {
+  negociacion: false,
+};

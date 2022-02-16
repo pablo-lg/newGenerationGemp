@@ -1,0 +1,20 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154115",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "despliegue",
+  "fields": [
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Despliegue",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

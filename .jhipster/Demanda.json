@@ -1,0 +1,51 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154125",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "demanda",
+  "fields": [
+    {
+      "fieldName": "a1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "a2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "a3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "a4",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "a5",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Demanda",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "descripcion",
+      "otherEntityName": "tipoEmp",
+      "otherEntityRelationshipName": "demanda",
+      "relationshipName": "tipoEmp",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityField": "descripcion",
+      "otherEntityName": "despliegue",
+      "otherEntityRelationshipName": "demanda",
+      "relationshipName": "despliegue",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

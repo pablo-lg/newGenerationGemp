@@ -1,0 +1,24 @@
+{
+  "applications": "*",
+  "changelogDate": "20220216154128",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "grupo_emp",
+  "fields": [
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "esProtegido",
+      "fieldType": "Boolean"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "GrupoEmp",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
