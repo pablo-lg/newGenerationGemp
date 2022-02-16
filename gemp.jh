@@ -151,7 +151,7 @@ enum EstadoFirma {
   APROBADO_POR_CIC ("Aprobado por el CIC")
 }
 
-entity HistoricoWF {
+entity HistoWF {
 	Id Long required,
     estadoAnterior Estado,
     estadoActual Estado,
@@ -172,13 +172,13 @@ entity GrupoEmp {
 }
 
 
-entity FiltroReportes {
+entity FiltroRep {
   Id  Long required,
   nombre String,
   filtro TextBlob
 }
 
-entity UsuariosGemp {
+entity UsuGemp {
 	Id Long required,
     usu String required unique,
     nombre String,
@@ -201,7 +201,7 @@ relationship ManyToOne {
     Emprendimiento{EjecCuentas(nombre)} to EjecCuentas,
     Emprendimiento{Direccion(calle)} to Direccion,
     Emprendimiento{Direccion(calle)} to Competencia,
-    HistoricoWF{Emprendimiento(nombre)} to Emprendimiento,
+    HistoWF{Emprendimiento(nombre)} to Emprendimiento,
     Demanda{TipoEmp(descripcion)} to TipoEmp,
     Demanda{Despliegue(descripcion)} to Despliegue
 }
@@ -214,11 +214,11 @@ relationship ManyToOne {
 paginate Emprendimiento with pagination
 paginate Direccion with pagination
 
-paginate HistoricoWF with pagination
+paginate HistoWF with pagination
 
 
 filter Emprendimiento
-filter HistoricoWF
+filter HistoWF
 filter Direccion
 
  
