@@ -1,0 +1,9 @@
+
+entity Despliegue {
+	Id Long,
+	regionName String
+}
+
+entity Segmento {
+	countryName String
+}
