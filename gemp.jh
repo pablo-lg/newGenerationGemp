@@ -1,45 +1,37 @@
 
 entity Despliegue {
-  Id  Long required,
   descripcion  String
 }
 
 entity Segmento {
-  Id  Long required,
   descripcion String
 }
 
 entity Competencia {
-  Id  Long required,
   descripcion String
 }
 
 entity Tecnologia {
-  Id  Long required,
   descripcion String
 }
 
 
 entity NSE {
-  Id  Long required,
   descripcion String,
   activo Boolean,
 }
 
 entity TipoObra {
-  Id  Long required,
   descripcion String
 }
 
 
 entity TipoEmp {
-  Id  Long required,
   demanda Boolean,
   descripcion  String
 }
 
 entity EjecCuentas {
-  Id  Long required,
   telefono String,
   apellido String,
   celular String,
@@ -50,7 +42,6 @@ entity EjecCuentas {
 }
 
 entity Direccion {
-  Id Long required,
   identification String unique,
   pais String required,
   provincia String required,
@@ -74,7 +65,6 @@ entity Direccion {
 }
 
 entity Emprendimiento {
-  Id Long required,
   nombre String,
   contacto String,
   fechaFinObra LocalDate,
@@ -118,7 +108,6 @@ entity Emprendimiento {
 }
 
 entity Demanda {
-	Id Long required,
     a1 String,
     a2 String,
     a3 String,
@@ -151,14 +140,12 @@ enum EstadoFirma {
   APROBADO_POR_CIC ("Aprobado por el CIC")
 }
 
-entity HistoricoWF {
-	Id Long required,
+entity HistoWF {
     estadoAnterior Estado,
     estadoActual Estado,
 }
 
 entity Parametros {
-	Id Long required,
     clave String,
     valor String,
 }
@@ -166,20 +153,17 @@ entity Parametros {
 
 
 entity GrupoEmp {
- Id Long required,
  descripcion String,
  esProtegido Boolean,
 }
 
 
-entity FiltroReportes {
-  Id  Long required,
+entity FiltroRep {
   nombre String,
   filtro TextBlob
 }
 
-entity UsuariosGemp {
-	Id Long required,
+entity UsuGemp {
     usu String required unique,
     nombre String,
     apellido String,
@@ -201,7 +185,7 @@ relationship ManyToOne {
     Emprendimiento{EjecCuentas(nombre)} to EjecCuentas,
     Emprendimiento{Direccion(calle)} to Direccion,
     Emprendimiento{Direccion(calle)} to Competencia,
-    HistoricoWF{Emprendimiento(nombre)} to Emprendimiento,
+    HistoWF{Emprendimiento(nombre)} to Emprendimiento,
     Demanda{TipoEmp(descripcion)} to TipoEmp,
     Demanda{Despliegue(descripcion)} to Despliegue
 }
@@ -214,11 +198,11 @@ relationship ManyToOne {
 paginate Emprendimiento with pagination
 paginate Direccion with pagination
 
-paginate HistoricoWF with pagination
+paginate HistoWF with pagination
 
 
 filter Emprendimiento
-filter HistoricoWF
+filter HistoWF
 filter Direccion
 
  
