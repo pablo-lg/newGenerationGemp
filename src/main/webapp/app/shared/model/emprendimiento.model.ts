@@ -64,7 +64,7 @@ export interface IEmprendimiento {
   tecnologia?: ITecnologia | null;
   ejecCuentas?: IEjecCuentas | null;
   direccion?: IDireccion | null;
-  direccion?: ICompetencia | null;
+  compentencia?: ICompetencia | null;
 }
 
 export const defaultValue: Readonly<IEmprendimiento> = {

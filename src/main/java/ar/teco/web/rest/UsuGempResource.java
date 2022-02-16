@@ -8,8 +8,6 @@ import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -48,7 +46,7 @@ public class UsuGempResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PostMapping("/usu-gemps")
-    public ResponseEntity<UsuGemp> createUsuGemp(@Valid @RequestBody UsuGemp usuGemp) throws URISyntaxException {
+    public ResponseEntity<UsuGemp> createUsuGemp(@RequestBody UsuGemp usuGemp) throws URISyntaxException {
         log.debug("REST request to save UsuGemp : {}", usuGemp);
         if (usuGemp.getId() != null) {
             throw new BadRequestAlertException("A new usuGemp cannot already have an ID", ENTITY_NAME, "idexists");
@@ -71,10 +69,8 @@ public class UsuGempResource {
      * @throws URISyntaxException if the Location URI syntax is incorrect.
      */
     @PutMapping("/usu-gemps/{id}")
-    public ResponseEntity<UsuGemp> updateUsuGemp(
-        @PathVariable(value = "id", required = false) final Long id,
-        @Valid @RequestBody UsuGemp usuGemp
-    ) throws URISyntaxException {
+    public ResponseEntity<UsuGemp> updateUsuGemp(@PathVariable(value = "id", required = false) final Long id, @RequestBody UsuGemp usuGemp)
+        throws URISyntaxException {
         log.debug("REST request to update UsuGemp : {}, {}", id, usuGemp);
         if (usuGemp.getId() == null) {
             throw new BadRequestAlertException("Invalid id", ENTITY_NAME, "idnull");
@@ -108,7 +104,7 @@ public class UsuGempResource {
     @PatchMapping(value = "/usu-gemps/{id}", consumes = { "application/json", "application/merge-patch+json" })
     public ResponseEntity<UsuGemp> partialUpdateUsuGemp(
         @PathVariable(value = "id", required = false) final Long id,
-        @NotNull @RequestBody UsuGemp usuGemp
+        @RequestBody UsuGemp usuGemp
     ) throws URISyntaxException {
         log.debug("REST request to partial update UsuGemp partially : {}, {}", id, usuGemp);
         if (usuGemp.getId() == null) {

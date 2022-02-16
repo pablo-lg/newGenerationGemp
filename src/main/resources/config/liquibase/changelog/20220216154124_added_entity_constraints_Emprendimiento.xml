@@ -62,9 +62,9 @@
                                  referencedColumnNames="id"
                                  referencedTableName="direccion"/>
 
-        <addForeignKeyConstraint baseColumnNames="direccion_id"
+        <addForeignKeyConstraint baseColumnNames="compentencia_id"
                                  baseTableName="emprendimiento"
-                                 constraintName="fk_emprendimie__direccio_ec_id"
+                                 constraintName="fk_emprendimie__compente_4e_id"
                                  referencedColumnNames="id"
                                  referencedTableName="competencia"/>
     </changeSet>

@@ -73,16 +73,7 @@ export const UsuGempUpdate = (props: RouteComponentProps<{ id: string }>) => {
           ) : (
             <ValidatedForm defaultValues={defaultValues()} onSubmit={saveEntity}>
               {!isNew ? <ValidatedField name="id" required readOnly id="usu-gemp-id" label="ID" validate={{ required: true }} /> : null}
-              <ValidatedField
-                label="Usu"
-                id="usu-gemp-usu"
-                name="usu"
-                data-cy="usu"
-                type="text"
-                validate={{
-                  required: { value: true, message: 'This field is required.' },
-                }}
-              />
+              <ValidatedField label="Usu" id="usu-gemp-usu" name="usu" data-cy="usu" type="text" />
               <ValidatedField label="Nombre" id="usu-gemp-nombre" name="nombre" data-cy="nombre" type="text" />
               <ValidatedField label="Apellido" id="usu-gemp-apellido" name="apellido" data-cy="apellido" type="text" />
               <ValidatedField label="Email" id="usu-gemp-email" name="email" data-cy="email" type="text" />

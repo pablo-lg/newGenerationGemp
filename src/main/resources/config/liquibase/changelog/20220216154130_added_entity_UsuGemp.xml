@@ -15,7 +15,7 @@
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="usu" type="varchar(255)">
-                <constraints nullable="false" unique="true" uniqueConstraintName="ux_usu_gemp__usu" />
+                <constraints nullable="true" />
             </column>
             <column name="nombre" type="varchar(255)">
                 <constraints nullable="true" />

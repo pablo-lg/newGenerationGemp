@@ -239,10 +239,10 @@
       "relationshipType": "many-to-one"
     },
     {
-      "otherEntityField": "calle",
+      "otherEntityField": "descripcion",
       "otherEntityName": "competencia",
       "otherEntityRelationshipName": "emprendimiento",
-      "relationshipName": "direccion",
+      "relationshipName": "compentencia",
       "relationshipType": "many-to-one"
     }
   ],

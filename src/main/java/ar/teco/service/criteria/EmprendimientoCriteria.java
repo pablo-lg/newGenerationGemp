@@ -179,7 +179,7 @@ public class EmprendimientoCriteria implements Serializable, Criteria {
 
     private LongFilter direccionId;
 
-    private LongFilter direccionId;
+    private LongFilter compentenciaId;
 
     private Boolean distinct;
 
@@ -236,7 +236,7 @@ public class EmprendimientoCriteria implements Serializable, Criteria {
         this.tecnologiaId = other.tecnologiaId == null ? null : other.tecnologiaId.copy();
         this.ejecCuentasId = other.ejecCuentasId == null ? null : other.ejecCuentasId.copy();
         this.direccionId = other.direccionId == null ? null : other.direccionId.copy();
-        this.direccionId = other.direccionId == null ? null : other.direccionId.copy();
+        this.compentenciaId = other.compentenciaId == null ? null : other.compentenciaId.copy();
         this.distinct = other.distinct;
     }
 
@@ -995,19 +995,19 @@ public class EmprendimientoCriteria implements Serializable, Criteria {
         this.direccionId = direccionId;
     }
 
-    public LongFilter getDireccionId() {
-        return direccionId;
+    public LongFilter getCompentenciaId() {
+        return compentenciaId;
     }
 
-    public LongFilter direccionId() {
-        if (direccionId == null) {
-            direccionId = new LongFilter();
+    public LongFilter compentenciaId() {
+        if (compentenciaId == null) {
+            compentenciaId = new LongFilter();
         }
-        return direccionId;
+        return compentenciaId;
     }
 
-    public void setDireccionId(LongFilter direccionId) {
-        this.direccionId = direccionId;
+    public void setCompentenciaId(LongFilter compentenciaId) {
+        this.compentenciaId = compentenciaId;
     }
 
     public Boolean getDistinct() {
@@ -1078,7 +1078,7 @@ public class EmprendimientoCriteria implements Serializable, Criteria {
             Objects.equals(tecnologiaId, that.tecnologiaId) &&
             Objects.equals(ejecCuentasId, that.ejecCuentasId) &&
             Objects.equals(direccionId, that.direccionId) &&
-            Objects.equals(direccionId, that.direccionId) &&
+            Objects.equals(compentenciaId, that.compentenciaId) &&
             Objects.equals(distinct, that.distinct)
         );
     }
@@ -1136,7 +1136,7 @@ public class EmprendimientoCriteria implements Serializable, Criteria {
             tecnologiaId,
             ejecCuentasId,
             direccionId,
-            direccionId,
+            compentenciaId,
             distinct
         );
     }
@@ -1195,7 +1195,7 @@ public class EmprendimientoCriteria implements Serializable, Criteria {
             (tecnologiaId != null ? "tecnologiaId=" + tecnologiaId + ", " : "") +
             (ejecCuentasId != null ? "ejecCuentasId=" + ejecCuentasId + ", " : "") +
             (direccionId != null ? "direccionId=" + direccionId + ", " : "") +
-            (direccionId != null ? "direccionId=" + direccionId + ", " : "") +
+            (compentenciaId != null ? "compentenciaId=" + compentenciaId + ", " : "") +
             (distinct != null ? "distinct=" + distinct + ", " : "") +
             "}";
     }

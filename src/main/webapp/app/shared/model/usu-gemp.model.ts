@@ -1,6 +1,6 @@
 export interface IUsuGemp {
   id?: number;
-  usu?: string;
+  usu?: string | null;
   nombre?: string | null;
   apellido?: string | null;
   email?: string | null;

@@ -288,12 +288,12 @@ public class EmprendimientoQueryService extends QueryService<Emprendimiento> {
                         )
                     );
             }
-            if (criteria.getDireccionId() != null) {
+            if (criteria.getCompentenciaId() != null) {
                 specification =
                     specification.and(
                         buildSpecification(
-                            criteria.getDireccionId(),
-                            root -> root.join(Emprendimiento_.direccion, JoinType.LEFT).get(Competencia_.id)
+                            criteria.getCompentenciaId(),
+                            root -> root.join(Emprendimiento_.compentencia, JoinType.LEFT).get(Competencia_.id)
                         )
                     );
             }

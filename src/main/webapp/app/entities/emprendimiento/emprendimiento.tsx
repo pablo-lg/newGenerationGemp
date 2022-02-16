@@ -249,7 +249,7 @@ export const Emprendimiento = (props: RouteComponentProps<{ url: string }>) => {
                   Direccion <FontAwesomeIcon icon="sort" />
                 </th>
                 <th>
-                  Direccion <FontAwesomeIcon icon="sort" />
+                  Compentencia <FontAwesomeIcon icon="sort" />
                 </th>
                 <th />
               </tr>
@@ -378,8 +378,8 @@ export const Emprendimiento = (props: RouteComponentProps<{ url: string }>) => {
                     )}
                   </td>
                   <td>
-                    {emprendimiento.direccion ? (
-                      <Link to={`competencia/${emprendimiento.direccion.id}`}>{emprendimiento.direccion.calle}</Link>
+                    {emprendimiento.compentencia ? (
+                      <Link to={`competencia/${emprendimiento.compentencia.id}`}>{emprendimiento.compentencia.descripcion}</Link>
                     ) : (
                       ''
                     )}

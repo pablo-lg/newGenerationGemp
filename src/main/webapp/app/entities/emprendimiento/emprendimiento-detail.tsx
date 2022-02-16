@@ -223,8 +223,8 @@ export const EmprendimientoDetail = (props: RouteComponentProps<{ id: string }>)
           <dd>{emprendimientoEntity.ejecCuentas ? emprendimientoEntity.ejecCuentas.nombre : ''}</dd>
           <dt>Direccion</dt>
           <dd>{emprendimientoEntity.direccion ? emprendimientoEntity.direccion.calle : ''}</dd>
-          <dt>Direccion</dt>
-          <dd>{emprendimientoEntity.direccion ? emprendimientoEntity.direccion.calle : ''}</dd>
+          <dt>Compentencia</dt>
+          <dd>{emprendimientoEntity.compentencia ? emprendimientoEntity.compentencia.descripcion : ''}</dd>
         </dl>
         <Button tag={Link} to="/emprendimiento" replace color="info" data-cy="entityDetailsBackButton">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

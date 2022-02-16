@@ -138,23 +138,6 @@ class UsuGempResourceIT {
 
     @Test
     @Transactional
-    void checkUsuIsRequired() throws Exception {
-        int databaseSizeBeforeTest = usuGempRepository.findAll().size();
-        // set the field null
-        usuGemp.setUsu(null);
-
-        // Create the UsuGemp, which fails.
-
-        restUsuGempMockMvc
-            .perform(post(ENTITY_API_URL).contentType(MediaType.APPLICATION_JSON).content(TestUtil.convertObjectToJsonBytes(usuGemp)))
-            .andExpect(status().isBadRequest());
-
-        List<UsuGemp> usuGempList = usuGempRepository.findAll();
-        assertThat(usuGempList).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
     void getAllUsuGemps() throws Exception {
         // Initialize the database
         usuGempRepository.saveAndFlush(usuGemp);

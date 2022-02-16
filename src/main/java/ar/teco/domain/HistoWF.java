@@ -31,7 +31,7 @@ public class HistoWF implements Serializable {
     @ManyToOne
     @JsonIgnoreProperties(
         value = {
-            "grupoEmp", "tipoObra", "tipoEmp", "despliegue", "nSE", "segmento", "tecnologia", "ejecCuentas", "direccion", "direccion",
+            "grupoEmp", "tipoObra", "tipoEmp", "despliegue", "nSE", "segmento", "tecnologia", "ejecCuentas", "direccion", "compentencia",
         },
         allowSetters = true
     )

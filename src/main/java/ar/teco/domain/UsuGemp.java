@@ -2,7 +2,6 @@ package ar.teco.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import javax.validation.constraints.*;
 
 /**
  * A UsuGemp.
@@ -19,8 +18,7 @@ public class UsuGemp implements Serializable {
     @Column(name = "id")
     private Long id;
 
-    @NotNull
-    @Column(name = "usu", nullable = false, unique = true)
+    @Column(name = "usu")
     private String usu;
 
     @Column(name = "nombre")

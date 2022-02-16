@@ -173,12 +173,10 @@ public class Emprendimiento implements Serializable {
     private EjecCuentas ejecCuentas;
 
     @ManyToOne
-    @ManyToOne
     private Direccion direccion;
 
     @ManyToOne
-    @ManyToOne
-    private Competencia direccion;
+    private Competencia compentencia;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
 
@@ -832,16 +830,16 @@ public class Emprendimiento implements Serializable {
         return this;
     }
 
-    public Competencia getDireccion() {
-        return this.direccion;
+    public Competencia getCompentencia() {
+        return this.compentencia;
     }
 
-    public void setDireccion(Competencia competencia) {
-        this.direccion = competencia;
+    public void setCompentencia(Competencia competencia) {
+        this.compentencia = competencia;
     }
 
-    public Emprendimiento direccion(Competencia competencia) {
-        this.setDireccion(competencia);
+    public Emprendimiento compentencia(Competencia competencia) {
+        this.setCompentencia(competencia);
         return this;
     }
 
