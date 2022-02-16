@@ -97,7 +97,7 @@ export const EmprendimientoUpdate = (props: RouteComponentProps<{ id: string }>)
       tecnologia: tecnologias.find(it => it.id.toString() === values.tecnologia.toString()),
       ejecCuentas: ejecCuentas.find(it => it.id.toString() === values.ejecCuentas.toString()),
       direccion: direccions.find(it => it.id.toString() === values.direccion.toString()),
-      direccion: competencias.find(it => it.id.toString() === values.direccion.toString()),
+      compentencia: competencias.find(it => it.id.toString() === values.compentencia.toString()),
     };
 
     if (isNew) {
@@ -124,7 +124,7 @@ export const EmprendimientoUpdate = (props: RouteComponentProps<{ id: string }>)
           tecnologia: emprendimientoEntity?.tecnologia?.id,
           ejecCuentas: emprendimientoEntity?.ejecCuentas?.id,
           direccion: emprendimientoEntity?.direccion?.id,
-          direccion: emprendimientoEntity?.direccion?.id,
+          compentencia: emprendimientoEntity?.compentencia?.id,
         };
 
   return (
@@ -396,12 +396,18 @@ export const EmprendimientoUpdate = (props: RouteComponentProps<{ id: string }>)
                     ))
                   : null}
               </ValidatedField>
-              <ValidatedField id="emprendimiento-direccion" name="direccion" data-cy="direccion" label="Direccion" type="select">
+              <ValidatedField
+                id="emprendimiento-compentencia"
+                name="compentencia"
+                data-cy="compentencia"
+                label="Compentencia"
+                type="select"
+              >
                 <option value="" key="0" />
                 {competencias
                   ? competencias.map(otherEntity => (
                       <option value={otherEntity.id} key={otherEntity.id}>
-                        {otherEntity.calle}
+                        {otherEntity.descripcion}
                       </option>
                     ))
                   : null}

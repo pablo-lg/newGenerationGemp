@@ -3881,28 +3881,28 @@ class EmprendimientoResourceIT {
 
     @Test
     @Transactional
-    void getAllEmprendimientosByDireccionIsEqualToSomething() throws Exception {
+    void getAllEmprendimientosByCompentenciaIsEqualToSomething() throws Exception {
         // Initialize the database
         emprendimientoRepository.saveAndFlush(emprendimiento);
-        Competencia direccion;
+        Competencia compentencia;
         if (TestUtil.findAll(em, Competencia.class).isEmpty()) {
-            direccion = CompetenciaResourceIT.createEntity(em);
-            em.persist(direccion);
+            compentencia = CompetenciaResourceIT.createEntity(em);
+            em.persist(compentencia);
             em.flush();
         } else {
-            direccion = TestUtil.findAll(em, Competencia.class).get(0);
+            compentencia = TestUtil.findAll(em, Competencia.class).get(0);
         }
-        em.persist(direccion);
+        em.persist(compentencia);
         em.flush();
-        emprendimiento.setDireccion(direccion);
+        emprendimiento.setCompentencia(compentencia);
         emprendimientoRepository.saveAndFlush(emprendimiento);
-        Long direccionId = direccion.getId();
+        Long compentenciaId = compentencia.getId();
 
-        // Get all the emprendimientoList where direccion equals to direccionId
-        defaultEmprendimientoShouldBeFound("direccionId.equals=" + direccionId);
+        // Get all the emprendimientoList where compentencia equals to compentenciaId
+        defaultEmprendimientoShouldBeFound("compentenciaId.equals=" + compentenciaId);
 
-        // Get all the emprendimientoList where direccion equals to (direccionId + 1)
-        defaultEmprendimientoShouldNotBeFound("direccionId.equals=" + (direccionId + 1));
+        // Get all the emprendimientoList where compentencia equals to (compentenciaId + 1)
+        defaultEmprendimientoShouldNotBeFound("compentenciaId.equals=" + (compentenciaId + 1));
     }
 
     /**

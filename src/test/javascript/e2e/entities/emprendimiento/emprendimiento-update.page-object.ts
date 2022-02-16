@@ -56,7 +56,7 @@ export default class EmprendimientoUpdatePage {
   tecnologiaSelect: ElementFinder = element(by.css('select#emprendimiento-tecnologia'));
   ejecCuentasSelect: ElementFinder = element(by.css('select#emprendimiento-ejecCuentas'));
   direccionSelect: ElementFinder = element(by.css('select#emprendimiento-direccion'));
-  direccionSelect: ElementFinder = element(by.css('select#emprendimiento-direccion'));
+  compentenciaSelect: ElementFinder = element(by.css('select#emprendimiento-compentencia'));
 
   getPageTitle() {
     return this.pageTitle;
@@ -530,20 +530,20 @@ export default class EmprendimientoUpdatePage {
     return this.direccionSelect.element(by.css('option:checked')).getText();
   }
 
-  async direccionSelectLastOption() {
-    await this.direccionSelect.all(by.tagName('option')).last().click();
+  async compentenciaSelectLastOption() {
+    await this.compentenciaSelect.all(by.tagName('option')).last().click();
   }
 
-  async direccionSelectOption(option) {
-    await this.direccionSelect.sendKeys(option);
+  async compentenciaSelectOption(option) {
+    await this.compentenciaSelect.sendKeys(option);
   }
 
-  getDireccionSelect() {
-    return this.direccionSelect;
+  getCompentenciaSelect() {
+    return this.compentenciaSelect;
   }
 
-  async getDireccionSelectedOption() {
-    return this.direccionSelect.element(by.css('option:checked')).getText();
+  async getCompentenciaSelectedOption() {
+    return this.compentenciaSelect.element(by.css('option:checked')).getText();
   }
 
   async save() {
@@ -653,7 +653,7 @@ export default class EmprendimientoUpdatePage {
     await this.tecnologiaSelectLastOption();
     await this.ejecCuentasSelectLastOption();
     await this.direccionSelectLastOption();
-    await this.direccionSelectLastOption();
+    await this.compentenciaSelectLastOption();
     await this.save();
     await waitUntilHidden(this.saveButton);
   }
